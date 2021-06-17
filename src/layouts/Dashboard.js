@@ -2,8 +2,10 @@ import React from 'react'
 // import JobPositionList from '../pages/JobPositionList'
 import Categories from './Categories'
 import { Grid } from 'semantic-ui-react'
-// import CityList from '../pages/CityList'
-import CvList from '../pages/CvList'
+import CityList from '../pages/CityList'
+import {Route} from 'react-router'
+import JobseekerDetail from '../pages/JobseekerDetail'
+import JobseekerList from '../pages/JobseekerList'
 
 export default function Dashboard() {
     return (
@@ -16,7 +18,11 @@ export default function Dashboard() {
                     <Grid.Column width={12}>
                         {/* <JobPositionList></JobPositionList> */}
                         {/* <CityList></CityList> */}
-                        <CvList></CvList>
+                        {/* <CvList></CvList> */}
+                        <Route exact path="/" component={CityList}></Route>
+                        <Route exact path="/cities" component={CityList}></Route>
+                        <Route exact path="/jobseekers" component={JobseekerList}></Route>
+                        <Route path="/jobseekers/:id" component={JobseekerDetail}></Route>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
