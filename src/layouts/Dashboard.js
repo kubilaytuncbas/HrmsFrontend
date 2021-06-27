@@ -7,6 +7,7 @@ import {Route} from 'react-router'
 import JobseekerDetail from '../pages/JobseekerDetail'
 import JobseekerList from '../pages/JobseekerList'
 import JobseekerAdd from '../pages/JobseekerAdd'
+import JobAdvertisementAdd from '../pages/JobAdvertisementAdd'
 
 export default function Dashboard() {
     return (
@@ -25,6 +26,7 @@ export default function Dashboard() {
                         <Route exact path="/jobseekers" component={JobseekerList}></Route>
                         <Route path="/jobseekers/:id" component={JobseekerDetail}></Route>
                         <Route path="/jobseekers/add" component={JobseekerAdd}></Route>
+                        <Route path="/jobAdvertisements/add" component={JobAdvertisementAdd}></Route>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
