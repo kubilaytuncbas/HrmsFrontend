@@ -1,7 +1,7 @@
 import React from 'react'
-import { Form, Formik,Field,ErrorMessage, yupToFormErrors } from 'formik'
+import { Form, Formik,Field,ErrorMessage, yupToFormErrorsn} from 'formik'
 import * as Yup from "yup"
-import { FormField,Button,Label } from 'semantic-ui-react'
+import { FormField,Button,Label,Icon } from 'semantic-ui-react'
 import KtTextInput from '../utilities/KtTextInput'
 
 export default function JobseekerAdd() {
@@ -36,7 +36,7 @@ export default function JobseekerAdd() {
                 <Form className="ui form">
                     <KtTextInput name="firstName" placeholder="İsim"/>
                     <KtTextInput name="lastName" placeholder="Soyisim"/>
-                    <Button color="green" type="submit">Ekle</Button>
+                    <Button className="btnAdd" color="blue" type="submit" basic style={{ marginTop: 20, width: 800 }}> YAYINLA<Icon style={{ paddingLeft: 10 }} name="paper plane"></Icon></Button>
                 </Form>
             </Formik>
 

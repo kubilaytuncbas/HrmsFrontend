@@ -8,6 +8,8 @@ import JobseekerDetail from '../pages/JobseekerDetail'
 import JobseekerList from '../pages/JobseekerList'
 import JobseekerAdd from '../pages/JobseekerAdd'
 import JobAdvertisementAdd from '../pages/JobAdvertisementAdd'
+import JobAdvertisementList from '../pages/JobAdvertisementList'
+import AdvertisementDetails from '../pages/AdvertisementDetails'
 
 export default function Dashboard() {
     return (
@@ -27,6 +29,8 @@ export default function Dashboard() {
                         <Route path="/jobseekers/:id" component={JobseekerDetail}></Route>
                         <Route path="/jobseekers/add" component={JobseekerAdd}></Route>
                         <Route path="/jobAdvertisements/add" component={JobAdvertisementAdd}></Route>
+                        <Route path="/jobAdvertisements/list" component={JobAdvertisementList}></Route>
+                        <Route path="/jobAdvertisements/:id" component={AdvertisementDetails}></Route>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
